@@ -1,7 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 export const routes = [
-  { path: '/', component: () => import('@/views/Home/Index.vue'), title: 'home' },
+  {
+    path: '/',
+    component: () => import('@/views/Home/Index.vue'),
+    // title: 'home',
+  },
   { path: '/about', component: () => import('@/views/About/Index.vue') },
 ];
 

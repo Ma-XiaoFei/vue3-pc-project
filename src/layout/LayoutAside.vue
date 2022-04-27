@@ -4,9 +4,9 @@ import { routes } from '@/router';
 
 <template>
   <div class="block">
-    <el-carousel height="200px">
+    <el-carousel height="200px" style="cursor: pointer">
       <el-carousel-item v-for="item in 2" :key="item">
-        <h3 class="small">{{ item }}</h3>
+        <!-- <h3 class="small">{{ item }}</h3> -->
       </el-carousel-item>
     </el-carousel>
     <ul class="asideItem">
@@ -52,6 +52,9 @@ import { routes } from '@/router';
     margin-top: 10px;
     list-style: none;
     border-radius: 13px;
+  }
+  li:nth-child(1):hover {
+    box-shadow: 0px 0px 3px 2px #d5e0e8;
   }
 }
 </style>
