@@ -25,7 +25,7 @@ function renderEchart(data: any = {}) {
                 </div>`;
             })
             .join('')}
-        </div>`
+        </div>`;
         return `<div style="width: 250px; max-height: 30vh; overflow: auto">
             <div>${title}</div>
             <div>${f.marker} ${f.seriesName}：第${rank[0]}页，第${rank[1]}行，第${rank[2]}列</div>`
@@ -68,14 +68,26 @@ function renderEchart(data: any = {}) {
         name: '自然位',
         type: 'line',
         smooth: true,
-        data: data.nature,
+        data: data.nature.map((t: CommonType.BaseObject)=> {
+          //把0转成null，折线断掉链接
+          return {
+            ...t,
+            value: t.value || null
+          };
+        }),
         connectNulls: false
       },
       {
         name: '广告位',
         type: 'line',
         smooth: true,
-        data: data.advert,
+        data: data.advert.map((t: CommonType.BaseObject)=> {
+          //把0转成null，折线断掉链接
+          return {
+            ...t,
+            value: t.value || null
+          };
+        }),
         connectNulls: false
       },
     ],
