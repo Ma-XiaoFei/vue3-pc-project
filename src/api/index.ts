@@ -1,15 +1,12 @@
 import axios from 'axios';
 
 const service = axios.create({
-  baseURL: 'http://mock.xiaofei.fun/mock/62690051a1af0a00ad55c09c',
+  baseURL: 'http://101.43.231.26:2205',
   timeout: 15000,
 });
 
 service.interceptors.request.use(
   (config) => {
-    if (config.loading) {
-      alert('s');
-    }
     return config;
   },
   (error) => Promise.reject(error)

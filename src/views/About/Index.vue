@@ -81,7 +81,6 @@ onMounted(() => {
   chart.showLoading();
 
   chart.on('click', (params) => {
-    console.log(params);
     const event = params.event;
     const style = data.popoverStyle;
     style.display === 'none' && (style.display = 'block');

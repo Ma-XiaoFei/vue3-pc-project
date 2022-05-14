@@ -11,8 +11,10 @@
 	},
 	"plugins": ["vue", "@typescript-eslint"],
 	"globals": {
+		"API": "readonly",
 		"defineProps": "readonly",
-		"defineEmits": "readonly"
+		"defineEmits": "readonly",
+		"CommonType": "readonly"
 	},
 	"rules": {
 		"vue/no-multiple-template-root": "off",

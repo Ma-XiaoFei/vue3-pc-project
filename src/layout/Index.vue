@@ -23,6 +23,7 @@ import LayoutMain from './LayoutMain.vue';
   background: #f0f0f0;
 
   #content-main {
+    flex: 1;
     padding: 10px 10px 10px 0;
     height: 100vh;
     overflow: auto;
